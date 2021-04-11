@@ -329,12 +329,85 @@ paris.creatingSalmonCookies();
 
 
 
+const lima = {
+    locationNAme:'Lima',
+    min:2,
+    max:16,
+    avg:4.6,
+    customerNumb:0,
+    customerNumbArray:[],
+    amount:0,
+    amountCookiePurchase:[],
+    
+    getCustomerNumber:function(){//random number of customer per hour
+        for (let i=0 ; i<14 ; i++){ 
+            this.customerNumb = randomValue(23,65);  
+            //console.log(this.customerNumb);
+            this.customerNumbArray.push(this.customerNumb);
+           // console.log(this.customerNumbArray);
+        }
+    },
+
+    getCookiePurchase:function(){
+        for(let i=0 ; i<this.customerNumbArray.length ; i++){
+         this.amount = this.customerNumbArray[i] * this.avg ;
+         this.amount = Math.ceil(this.amount);
+         this.amountCookiePurchase.push(this.amount);
+        //console.log(this.amount);
+        }
+    console.log(this.amountCookiePurchase)
+    },
+
+    creatingSalmonCookies:function(){
+
+        let container = document.getElementById('salmonCookies');
+
+        let article = document.createElement('article');
+        container.appendChild(article);
+
+        let h2 = document.createElement('h2');
+        article.appendChild(h2);
+        h2.textContent = this.locationNAme;
+
+        
+         let unorderlist= document.createElement('ul');
+         article.appendChild(unorderlist);
+         let li=null ;
+         let time=5;
+         let clock=false;
+         let total=0;
 
 
+            for (let i=0; i<= this.amountCookiePurchase.length ; i++){
+               li=document.createElement('li');
+               unorderlist.appendChild(li);
+
+               if (time < 12 || i < 6){
+                   time++;
+                   clock='AM';
+                   li.textContent=`${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
+               }else{
+                   time=1;
+               }
+               
+               if(i>=6){
+                   clock='PM';
+               }
+               if(i<14){
+                   li.textContent=`${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
+                   total=total+this.amountCookiePurchase[i];
+               }
+
+            }
+             li.textContent=`TOTAL : ${total} Cookies`;   
+    },
+}
 
 
-
-
+//call the functions
+lima.getCustomerNumber(); 
+lima.getCookiePurchase();
+lima.creatingSalmonCookies();
 
 
 
