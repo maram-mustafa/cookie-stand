@@ -1,6 +1,5 @@
 'use strict';
 
-
 const seattle = {
     locationNAme:'Seattle',
     min:23,
@@ -39,6 +38,8 @@ const seattle = {
         container.appendChild(article);
 
         let image = document.createElement('img');
+
+       let image = document.createElement('img');
         article.appendChild(image);
         image.setAttribute('src', 'images/salmon.png');
         image.setAttribute('width','300px');
@@ -81,7 +82,6 @@ const seattle = {
              li.textContent=`TOTAL : ${total} Cookies`;   
     },
 
-};
 
 
 //call the functions
@@ -328,6 +328,8 @@ const paris = {
              li.textContent=`TOTAL : ${total} Cookies`;   
     }
 };
+    },
+}
 
 
 //call the functions
@@ -410,6 +412,8 @@ const lima = {
              li.textContent=`TOTAL : ${total} Cookies`;   
     }
 };
+    },
+}
 
 
 //call the functions
@@ -425,3 +429,5 @@ function randomValue(min, max) {
 }
 console.log(randomValue(23,65));
 
+
+console.log(randomValue(23,65));
