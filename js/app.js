@@ -1,5 +1,6 @@
 'use strict';
 
+
 const seattle = {
     locationNAme:'Seattle',
     min:23,
@@ -37,6 +38,12 @@ const seattle = {
         let article = document.createElement('article');
         container.appendChild(article);
 
+        let image = document.createElement('img');
+        article.appendChild(image);
+        image.setAttribute('src', 'images/salmon.png');
+        image.setAttribute('width','300px');
+
+
         let h2 = document.createElement('h2');
         article.appendChild(h2);
         h2.textContent = this.locationNAme;
@@ -73,7 +80,8 @@ const seattle = {
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
     },
-}
+
+};
 
 
 //call the functions
@@ -318,8 +326,8 @@ const paris = {
 
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
-    },
-}
+    }
+};
 
 
 //call the functions
@@ -400,8 +408,8 @@ const lima = {
 
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
-    },
-}
+    }
+};
 
 
 //call the functions
