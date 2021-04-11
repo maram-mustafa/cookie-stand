@@ -37,16 +37,18 @@ const seattle = {
         let article = document.createElement('article');
         container.appendChild(article);
 
+        let image = document.createElement('img');
+
        let image = document.createElement('img');
         article.appendChild(image);
         image.setAttribute('src', 'images/salmon.png');
         image.setAttribute('width','300px');
 
+
         let h2 = document.createElement('h2');
         article.appendChild(h2);
         h2.textContent = this.locationNAme;
 
-        
         
          let unorderlist= document.createElement('ul');
          article.appendChild(unorderlist);
@@ -79,7 +81,7 @@ const seattle = {
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
     },
-}
+
 
 
 //call the functions
@@ -324,6 +326,8 @@ const paris = {
 
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
+    }
+};
     },
 }
 
@@ -406,6 +410,8 @@ const lima = {
 
             }
              li.textContent=`TOTAL : ${total} Cookies`;   
+    }
+};
     },
 }
 
@@ -421,4 +427,7 @@ lima.creatingSalmonCookies();
 function randomValue(min, max) {     
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+console.log(randomValue(23,65));
+
+
 console.log(randomValue(23,65));
