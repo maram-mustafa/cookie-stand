@@ -91,6 +91,7 @@ console.log(seattle);
      customerNumbArray:[],
      amount:0,
      amountCookiePurchase:[],
+     total:0,
 
      getCustomerNumber:function(){//random number of customer per hour
       for (let i=0 ; i<hours.length ; i++){ 
@@ -156,6 +157,7 @@ const dubai = {
     customerNumbArray:[],
     amount:0,
     amountCookiePurchase:[],
+    total:0,
 
     getCustomerNumber:function(){//random number of customer per hour
         for (let i=0 ; i<hours.length ; i++){ 
@@ -220,6 +222,7 @@ const dubai = {
      customerNumbArray:[],
      amount:0,
      amountCookiePurchase:[],
+     total:0,
 
      getCustomerNumber:function(){//random number of customer per hour
         for (let i=0 ; i<hours.length ; i++){ 
@@ -285,6 +288,7 @@ const lima = {
     customerNumbArray:[],
     amount:0,
     amountCookiePurchase:[],
+    total:0,
     
 
     getCustomerNumber:function(){//random number of customer per hour
