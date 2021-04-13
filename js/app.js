@@ -207,6 +207,14 @@ console.log(arrOfobjects);
 
 
 
+
+
+
+
+
+
+
+
 //     let h2 = document.createElement('h2');
 //     parent.appendChild(h2);
 //     h2.textContent = this.locationNAme;
