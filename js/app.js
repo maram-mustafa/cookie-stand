@@ -42,7 +42,6 @@ dubai.getCustomerNumber();
 lima.getCustomerNumber();
 
 
-
 SalmonCookies.prototype.getCookiePurchase = function () {
     for (let i = 0; i < hours.length; i++) {
         this.amount = this.customerNumbArray[i] * this.avg;
@@ -172,37 +171,112 @@ SalmonCookies.prototype.render = function () {
     td8.textContent = lima.total;
 
 
-SalmonCookies.prototype.renderfooter = function () {
 
-    let footRow = document.createElement('tr')
-    table.appendChild(footRow);
+    SalmonCookies.prototype.renderfooter = function () {
 
-    let tablefoot = document.createElement('td');
-    footRow.appendChild(tablefoot);
-    tablefoot.textContent = 'Total'
+        let footRow = document.createElement('tr')
+        table.appendChild(footRow);
+
+        let tablefoot = document.createElement('td');
+        footRow.appendChild(tablefoot);
+        tablefoot.textContent = 'Total'
 
 
-    let Totalsum = 0;
-    for (let i = 0; i < hours.length; i++) {
-        let td = document.createElement('td');
-        footRow.appendChild(td);
-        var sum = 0;
+        let Totalsum = 0;
+        for (let i = 0; i < hours.length; i++) {
+            let td = document.createElement('td');
+            footRow.appendChild(td);
+            var sum = 0;
 
-        for (let j = 0; j < arrOfobjects.length; j++) {
-            sum += arrOfobjects[j].amountCookiePurchase[i];
+            for (let j = 0; j < arrOfobjects.length; j++) {
+                sum += arrOfobjects[j].amountCookiePurchase[i];
+            }
+            td.textContent = sum;
+            Totalsum += sum;
+
         }
-        td.textContent = sum;
-        Totalsum += sum;
+        let tablefoot1 = document.createElement('td');
+        footRow.appendChild(tablefoot1);
+
+        tablefoot1.textContent = Totalsum;
+
+
+        
+
+
 
     }
-    let tablefoot1 = document.createElement('td');
-    footRow.appendChild(tablefoot1);
-
-    tablefoot1.textContent = Totalsum;
 
 }
-}
+
 seattle.renderhed();
 seattle.render();
 seattle.renderfooter();
 console.log(arrOfobjects);
+
+
+
+
+
+
+
+const form = document.getElementById('SalmonCookieForm');
+
+form.addEventListener('submit', handleSubmitting);
+
+
+function handleSubmitting(event) {
+    event.preventDefault();
+    console.log(event);
+
+    table.removeChild(table.lastChild);
+
+    let newMinNum = parseInt(event.target.minNumField.value);
+    console.log(newMinNum);
+    let newMaxNum = parseInt(event.target.maxNumField.value);
+    console.log(newMaxNum);
+    let newAvg = parseFloat(event.target.avgNumField.value);
+    console.log(newAvg);
+
+    let newlocation = event.target.newlocation.value;
+    console.log(newlocation)
+
+
+    let locations = new SalmonCookies(newMinNum, newMaxNum, newAvg, newlocation);
+
+
+
+    let dataRow7 = document.createElement('tr');
+    table.appendChild(dataRow7);
+
+    let td = document.createElement('td');
+    dataRow7.appendChild(td);
+    td.textContent = newlocation;
+
+    locations.getCustomerNumber();
+    locations.getCookiePurchase();
+
+    for (let i = 0; i < hours.length; i++) {
+
+        let td9 = document.createElement('td');
+        dataRow7.appendChild(td9);
+        td9.textContent = locations.customerNumbArray[i];
+    }
+
+    let td10 = document.createElement('td');
+    dataRow7.appendChild(td10);
+    td10.textContent = locations.total;
+
+
+
+
+ 
+    locations.renderfooter();
+
+
+
+}
+
+
+
+
