@@ -1,6 +1,5 @@
 'use strict';
 
-
 const seattle = {
     locationNAme: 'Seattle',
     min: 23,
@@ -38,6 +37,14 @@ const seattle = {
         let article = document.createElement('article');
         container.appendChild(article);
 
+        let image = document.createElement('img');
+
+        let image = document.createElement('img');
+        article.appendChild(image);
+        image.setAttribute('src', 'images/salmon.png');
+        image.setAttribute('width', '300px');
+
+
         let h2 = document.createElement('h2');
         article.appendChild(h2);
         h2.textContent = this.locationNAme;
@@ -63,20 +70,10 @@ const seattle = {
                 time = 1;
             }
 
-            if (i >= 6) {
-                clock = 'PM';
-            }
-            if (i < 14) {
-                li.textContent = `${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
-                total = total + this.amountCookiePurchase[i];
-            }
 
         }
-        li.textContent = `TOTAL : ${total} Cookies`;
     },
 }
-
-
 //call the functions
 seattle.getCustomerNumber();
 seattle.getCookiePurchase();
@@ -309,19 +306,24 @@ const paris = {
             } else {
                 time = 1;
             }
-
-            if (i >= 6) {
-                clock = 'PM';
-            }
-            if (i < 14) {
-                li.textContent = `${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
-                total = total + this.amountCookiePurchase[i];
-            }
-
+            li.textContent = `TOTAL : ${total} Cookies`;
         }
-        li.textContent = `TOTAL : ${total} Cookies`;
-    },
 
+
+
+
+        if (i >= 6) {
+            clock = 'PM';
+        }
+        if (i < 14) {
+            li.textContent = `${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
+            total = total + this.amountCookiePurchase[i];
+        }
+
+
+        li.textContent = `TOTAL : ${total} Cookies`;
+
+    },
 }
 
 //call the functions
@@ -395,13 +397,8 @@ const lima = {
             if (i >= 6) {
                 clock = 'PM';
             }
-            if (i < 14) {
-                li.textContent = `${time} ${clock} : ${this.amountCookiePurchase[i]} Cookies`;
-                total = total + this.amountCookiePurchase[i];
-            }
-
+            li.textContent = `TOTAL : ${total} Cookies`;
         }
-        li.textContent = `TOTAL : ${total} Cookies`;
     },
 }
 
@@ -418,4 +415,5 @@ function randomValue(min, max) {
 }
 console.log(randomValue(23, 65));
 
-//co
+
+console.log(randomValue(23, 65));
