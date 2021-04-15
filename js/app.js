@@ -4,6 +4,8 @@
 function randomValue(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let arrOfobjects = [];
 
@@ -19,7 +21,6 @@ function SalmonCookies(locationName, minn, maxx, avg) {
     this.amountCookiePurchase = [];
     this.total = 0;
     arrOfobjects.push(this);
-
 }
 
 let seattle = new SalmonCookies('seattle', 23, 65, 6.3);
@@ -28,13 +29,13 @@ let dubai = new SalmonCookies('dubai', 11, 38, 3.7);
 let paris = new SalmonCookies('paris', 20, 38, 2.3);
 let lima = new SalmonCookies('lima', 2, 16, 4.6);
 
+
 SalmonCookies.prototype.getCustomerNumber = function () {
     for (let i = 0; i < hours.length; i++) {
         this.customerNumbArray.push(randomValue(this.min, this.max));
 
     }
 }
-
 seattle.getCustomerNumber();
 tokyo.getCustomerNumber();
 paris.getCustomerNumber();
@@ -51,7 +52,6 @@ SalmonCookies.prototype.getCookiePurchase = function () {
         //console.log(total);
     }
 }
-
 seattle.getCookiePurchase();
 tokyo.getCookiePurchase();
 paris.getCookiePurchase();
@@ -82,10 +82,12 @@ SalmonCookies.prototype.renderhed = function () {
     let tableHead = document.createElement('th');
     headRow.appendChild(tableHead);
     tableHead.textContent = 'Daily Location Total'
-
 }
 
+
 SalmonCookies.prototype.render = function () {
+
+    //for seattel
     let dataRow1 = document.createElement('tr');
     table.appendChild(dataRow1);
 
@@ -103,6 +105,7 @@ SalmonCookies.prototype.render = function () {
     dataRow1.appendChild(td0);
     td0.textContent = seattle.total;
 
+    //for tokyo
     let dataRow2 = document.createElement('tr');
     table.appendChild(dataRow2);
 
@@ -114,12 +117,13 @@ SalmonCookies.prototype.render = function () {
         let td = document.createElement('td');
         dataRow2.appendChild(td);
         td.textContent = tokyo.customerNumbArray[i];
-
     }
+
     let td2 = document.createElement('td');
     dataRow2.appendChild(td2);
     td2.textContent = tokyo.total;
 
+    //for paris
     let dataRow3 = document.createElement('tr');
     table.appendChild(dataRow3);
 
@@ -131,12 +135,13 @@ SalmonCookies.prototype.render = function () {
         let td = document.createElement('td');
         dataRow3.appendChild(td);
         td.textContent = paris.customerNumbArray[i];
-
     }
+
     let td4 = document.createElement('td');
     dataRow3.appendChild(td4);
     td4.textContent = paris.total;
 
+    //for dubai
     let dataRow4 = document.createElement('tr');
     table.appendChild(dataRow4);
 
@@ -149,11 +154,12 @@ SalmonCookies.prototype.render = function () {
         dataRow4.appendChild(td);
         td.textContent = dubai.customerNumbArray[i];
     }
+
     let td6 = document.createElement('td');
     dataRow4.appendChild(td6);
     td6.textContent = dubai.total;
 
-
+    //for lima
     let dataRow5 = document.createElement('tr');
     table.appendChild(dataRow5);
 
@@ -171,16 +177,13 @@ SalmonCookies.prototype.render = function () {
     td8.textContent = lima.total;
 
 
-
     SalmonCookies.prototype.renderfooter = function () {
-
         let footRow = document.createElement('tr')
         table.appendChild(footRow);
 
         let tablefoot = document.createElement('td');
         footRow.appendChild(tablefoot);
         tablefoot.textContent = 'Total'
-
 
         let Totalsum = 0;
         for (let i = 0; i < hours.length; i++) {
@@ -193,22 +196,14 @@ SalmonCookies.prototype.render = function () {
             }
             td.textContent = sum;
             Totalsum += sum;
-
         }
+
         let tablefoot1 = document.createElement('td');
         footRow.appendChild(tablefoot1);
 
         tablefoot1.textContent = Totalsum;
-
-
-        
-
-
-
     }
-
 }
-
 seattle.renderhed();
 seattle.render();
 seattle.renderfooter();
@@ -216,12 +211,7 @@ console.log(arrOfobjects);
 
 
 
-
-
-
-
 const form = document.getElementById('SalmonCookieForm');
-
 form.addEventListener('submit', handleSubmitting);
 
 
@@ -229,7 +219,7 @@ function handleSubmitting(event) {
     event.preventDefault();
     console.log(event);
 
-    table.removeChild(table.lastChild);
+    table.removeChild(table.lastChild); //to remove last Row
 
     let newMinNum = parseInt(event.target.minNumField.value);
     console.log(newMinNum);
@@ -242,9 +232,7 @@ function handleSubmitting(event) {
     console.log(newlocation)
 
 
-    let locations = new SalmonCookies(newMinNum, newMaxNum, newAvg, newlocation);
-
-
+    let locations = new SalmonCookies(newMinNum, newMaxNum, newAvg, newlocation); //new object
 
     let dataRow7 = document.createElement('tr');
     table.appendChild(dataRow7);
@@ -253,8 +241,8 @@ function handleSubmitting(event) {
     dataRow7.appendChild(td);
     td.textContent = newlocation;
 
-    locations.getCustomerNumber();
-    locations.getCookiePurchase();
+    locations.getCustomerNumber(); //call for new object
+    locations.getCookiePurchase(); //call for new object
 
     for (let i = 0; i < hours.length; i++) {
 
@@ -268,12 +256,7 @@ function handleSubmitting(event) {
     td10.textContent = locations.total;
 
 
-
-
- 
     locations.renderfooter();
-
-
 
 }
 
