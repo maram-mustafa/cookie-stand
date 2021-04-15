@@ -172,35 +172,35 @@ SalmonCookies.prototype.render = function () {
     td8.textContent = lima.total;
 
 
-SalmonCookies.prototype.renderfooter = function () {
+    SalmonCookies.prototype.renderfooter = function () {
 
-    let footRow = document.createElement('tr')
-    table.appendChild(footRow);
+        let footRow = document.createElement('tr')
+        table.appendChild(footRow);
 
-    let tablefoot = document.createElement('td');
-    footRow.appendChild(tablefoot);
-    tablefoot.textContent = 'Total'
+        let tablefoot = document.createElement('td');
+        footRow.appendChild(tablefoot);
+        tablefoot.textContent = 'Total'
 
 
-    let Totalsum = 0;
-    for (let i = 0; i < hours.length; i++) {
-        let td = document.createElement('td');
-        footRow.appendChild(td);
-        var sum = 0;
+        let Totalsum = 0;
+        for (let i = 0; i < hours.length; i++) {
+            let td = document.createElement('td');
+            footRow.appendChild(td);
+            var sum = 0;
 
-        for (let j = 0; j < arrOfobjects.length; j++) {
-            sum += arrOfobjects[j].amountCookiePurchase[i];
+            for (let j = 0; j < arrOfobjects.length; j++) {
+                sum += arrOfobjects[j].amountCookiePurchase[i];
+            }
+            td.textContent = sum;
+            Totalsum += sum;
+
         }
-        td.textContent = sum;
-        Totalsum += sum;
+        let tablefoot1 = document.createElement('td');
+        footRow.appendChild(tablefoot1);
+
+        tablefoot1.textContent = Totalsum;
 
     }
-    let tablefoot1 = document.createElement('td');
-    footRow.appendChild(tablefoot1);
-
-    tablefoot1.textContent = Totalsum;
-
-}
 }
 seattle.renderhed();
 seattle.render();
