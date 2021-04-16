@@ -185,6 +185,15 @@ SalmonCookies.prototype.render = function () {
         footRow.appendChild(tablefoot);
         tablefoot.textContent = 'Total'
 
+
+        let footRow = document.createElement('tr')
+        table.appendChild(footRow);
+
+        let tablefoot = document.createElement('td');
+        footRow.appendChild(tablefoot);
+        tablefoot.textContent = 'Total'
+
+
         let Totalsum = 0;
         for (let i = 0; i < hours.length; i++) {
             let td = document.createElement('td');
@@ -198,6 +207,11 @@ SalmonCookies.prototype.render = function () {
             Totalsum += sum;
         }
 
+        let tablefoot1 = document.createElement('td');
+        footRow.appendChild(tablefoot1);
+
+        tablefoot1.textContent = Totalsum;
+        }
         let tablefoot1 = document.createElement('td');
         footRow.appendChild(tablefoot1);
 
