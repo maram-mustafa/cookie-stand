@@ -232,17 +232,18 @@ function handleSubmitting(event) {
     console.log(newlocation)
 
 
-    let locations = new SalmonCookies(newMinNum, newMaxNum, newAvg, newlocation); //new object
+    let locations = new SalmonCookies( newlocation,newMinNum, newMaxNum, newAvg); //new object
+    
+    locations.getCustomerNumber(); //call for new object
+    locations.getCookiePurchase(); //call for new object
 
+    console.log(locations);
     let dataRow7 = document.createElement('tr');
     table.appendChild(dataRow7);
 
     let td = document.createElement('td');
     dataRow7.appendChild(td);
     td.textContent = newlocation;
-
-    locations.getCustomerNumber(); //call for new object
-    locations.getCookiePurchase(); //call for new object
 
     for (let i = 0; i < hours.length; i++) {
 
