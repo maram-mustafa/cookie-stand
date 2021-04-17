@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0%;
+    background-color: #faf3e0;
+}
+
+
+
+
+.hero-image {
+    background-image: url(https://images.unsplash.com/photo-1608711171015-40b192082efe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-color: #cccccc;
+    height: 570px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+
+
+  .hero-text span{
+      font-size: 130px;
+      font-family: Brush Script MT, Brush Script Std, cursive;
+  }
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+
+
+  }
+  
+
+
+header{
+    background-color:#eabf9f;
+    height: 70px;
+    color: white;    
+    font-family:'cursive';
+    font-size: 122%;
+}
+
+header nav{
+    float: right;
+    width: 27%;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 5%;
+    margin-top: auto;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration:none;
+    margin: 10px 0 0 1%;
+}
+
+header h1 { 
+    float: left;
+    margin: 9px 0 0 2%;
+}
+
+
+
+#first h1{
+    font-size:larger;
+    margin-left:3%;
+    font-family: 'cursive';
+    text-shadow:plum;
+
+
+}
+
+#first iframe{
+    border-radius: 50%;
+    width:30px ;
+    height: 30px;
+    font-family:cursive;
+
+}
+
+
+#first ul li{
+    display: inline-block;
+    margin:1%;   
+    font-family:'cursive';
+
+}
+
+#second{
+    margin-left: 30%;
+    clear: both;
+    padding: 3%;
+    
+}
+
+
+#second fieldset{
+    width:50%;
+    height: 70%;
+    border-width: 3px;
+    border-color:#1e212d ;
+    border-style:dotted;
+}
+
+#second legend{
+    font-size:x-large;
+    font-family:cursive;
+    color:#B68973;
+
+}
+
+#second label{
+    font-family:cursive;
+    text-align: justify;
+    padding: 3%;
+    margin: 2%;
+    color:#B68973;
+    font-family:cursive;
+    margin:7%;
+}
+
+
+#second input{
+    border-radius: 35%;
+    margin: 2%;
+    text-align: center;
+}
+
+
+#second div input {
+    background-color: #1e212d;
+    color: darkgray;
+    text-align: center;
+    margin-left: 70%;
+    font-size: 20px;
+    padding: 15px 32px;
+    border-radius: 20%;
+    font-family:cursive;
+
+
+}
+
+#salmonCookies{
+    margin-left: 28%;
+}
+
+#salmonCookies table th , td {
+ color:#B68973;
+ text-align: center;
+ font-family:cursive;
+
+}
+
+#three img{
+    border-radius: 50%;
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 9%;
+    
+
+}
+
+footer{
+    color: darkgrey;
+    text-align: center;
+    font-family:cursive;
+    font-size: larger;
+    font-family:'cursive';
+    
+
+}
+
+
+hr{
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/LTUC/amman-201d22/main/class-10/lab-a/lab-assets/hr-img.png);
+    border: 0px; 
+    height: 15px;
+    width: 57%;
+    margin-top: 2%;
+    
+ }
