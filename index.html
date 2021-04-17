@@ -6,71 +6,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookie</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header>
         <h1>Salmon Cookie</h1>
         <nav>
-            Loctions:
-            <div>
-                Seattle:
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161668284!2d-122.4821476690893!3d47.6129431830569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA%2C%20USA!5e0!3m2!1sen!2sjo!4v1618419496691!5m2!1sen!2sjo"
-                    width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-            </div><br>
-            <div>Tokyo:
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662980.6524248242!2d138.64862155777902!3d35.50405354021067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sjo!4v1618442456367!5m2!1sen!2sjo"
-                    width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div><br>
-
-            <div> Dubai:
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466193.63715752476!2d55.73577867510909!3d24.083562663241935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sjo!4v1618419869511!5m2!1sen!2sjo"
-                    width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div><br>
-
-            <div>Paris:
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9472264891!2d2.2770202225119434!3d48.85883773935407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sjo!4v1618419809058!5m2!1sen!2sjo"
-                    width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div><br>
-            <div>Lima
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249743.72044706985!2d-77.12786594457323!3d-12.026603399568613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima%2C%20Peru!5e0!3m2!1sen!2sjo!4v1618419586257!5m2!1sen!2sjo"
-                    width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-            </div>
-
-
-
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About Us</li>
+            </ul>
         </nav>
-        <p> Hour Open (6:00 AM to 8:00 PM for all locations) </p>
-        <a href="sales.htm">Sales Page </a>
+
     </header>
+
     <main>
-        <img src="images/fish.jpg">
+
+        <section>
+            <div class="hero-image">
+
+                <div class="hero-text">
+                    <p> <span>Salmon Cookie</span><br>
+                        YOU ARE WHAT YOU EAT.. SO I AM COOKIES
+                    <p>
+                </div>
+        </section>
         <br>
-        <img src="images/SC2.jpeg">
-        <img src="images/frosted-cookie.jpg">
-        <br>
-        <img src="images/shirt.jpg">
-        <img src="images/chinook.jpg">
-        <br>
-        <img src="images/family.jpg">
-        <img src="images/salmon.png">
+        <section id=text>
+
+        <p>Baked cookies of every kind layer the bakery counter. From white chocolate and macadamia nut right through to<br>
+            sprouted grains and wheat germ, there really is something for everyone. Yet it isn't the "grown-up" treats<br>
+            that catch my eye, it's the gingerbread men and their gum-drop buttons. From this store they are a far cry<br>
+            from the biscuit-like ones of my youth, the ones so crunchy you could hear the bite from a block away. These<br>
+            ones are softer, the ginger more pronounced as as moreish as anything I've ever tasted.
+        </p></section>
+        <section id=second>
+            <form id="SalmonCookieForm">
+                <fieldset>
+                    <legend> Salmon Cookie Form</legend>
+
+                    <label for="minNumField">Minimum </label>
+                    <input type="number" id="minNumField">
+                    <br>
+                    <label for="maxNumField">Maximum</label>
+                    <input type="number" id="maxNumField">
+                    <br>
+                    <label for="avgNumField">Average</label>
+                    <input type="number" id="avgNumField">
+                    <br>
+                    <label for="newLocation">Location</label>
+                    <input type="text" id="newlocation">
+
+                    <br>
+                    <div><input type="submit" value="submin"></div>
+        </section>
+        </fieldset>
+        </form>
+
+
+        <div id="salmonCookies"> </div>
+
+
 
     </main>
+    <hr>
     <footer>
-        <p>
-            Contact Information:<br>
+        <section id=first>
+            <h1>Locations</h1>
+            <ul>
+                <li>
+                    Seattle:
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161668284!2d-122.4821476690893!3d47.6129431830569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA%2C%20USA!5e0!3m2!1sen!2sjo!4v1618419496691!5m2!1sen!2sjo"
+                        width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+
+                <li>
+                    Tokyo:
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662980.6524248242!2d138.64862155777902!3d35.50405354021067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sjo!4v1618442456367!5m2!1sen!2sjo"
+                        width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+
+                <li>
+                    Dubai:
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466193.63715752476!2d55.73577867510909!3d24.083562663241935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sjo!4v1618419869511!5m2!1sen!2sjo"
+                        width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+
+                <li>
+                    Paris:
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9472264891!2d2.2770202225119434!3d48.85883773935407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sjo!4v1618419809058!5m2!1sen!2sjo"
+                        width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+
+                <li>
+                    Lima:
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249743.72044706985!2d-77.12786594457323!3d-12.026603399568613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima%2C%20Peru!5e0!3m2!1sen!2sjo!4v1618419586257!5m2!1sen!2sjo"
+                        width="80" height="80" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+            </ul>
+        </section>
+        <p> Open Hours 6:00 AM - 8:00 PM for all locations </p>
+        <p> SalmonCookie &copy; 2013. all rights reserved</p>
+
+        <p> Contact Information:<br>
             Call:077700000 <br>
-            email: slamoncookie@email
-        </p>
+            email: slamoncookie@</p>
+
+
+        <br>
+
+        <section id=three>
+            <img src="images/fish.jpg">
+
+            <img src="images/SC2.jpeg">
+            <img src="images/frosted-cookie.jpg">
+
+            <img src="images/shirt.jpg">
+            <img src="images/chinook.jpg">
+
+            <img src="images/family.jpg">
+            <img src="images/salmon.png">
+        </section>
+
     </footer>
+
 </body>
+<script src="js/app.js"></script>
 
 </html>
-
