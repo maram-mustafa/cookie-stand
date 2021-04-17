@@ -107,7 +107,7 @@ header h1 {
 }
 
 #second{
-    margin-left: 30%;
+    margin-left: 32.5%;
     clear: both;
     padding: 3%;
     
@@ -153,9 +153,9 @@ header h1 {
     text-align: center;
     margin-left: 70%;
     font-size: 20px;
-    padding: 15px 32px;
+    padding: 15px 20px;
     border-radius: 20%;
-    font-family:cursive;
+    font-family:'cursive';
 
 
 }
