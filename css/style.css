@@ -43,9 +43,9 @@ body{
 
 
 header{
-    background-color:#eabf9f;
+    background-color:#fcf8e8;
     height: 70px;
-    color: white;    
+    color:black;    
     font-family:'cursive';
     font-size: 122%;
 }
@@ -97,6 +97,13 @@ header h1 {
     margin:1%;   
     font-family:'cursive';
 
+}
+
+
+#text p{
+    text-align: center;
+    font-size: 25px;
+    color: gray;
 }
 
 #second{
