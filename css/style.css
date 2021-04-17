@@ -112,7 +112,7 @@ header h1 {
 }
 
 #second{
-    margin-left: 32.5%;
+    margin-left: 30%;
     clear: both;
     padding: 3%;
     
@@ -192,9 +192,6 @@ footer{
     font-family:'cursive';
     font-size: larger;
     font-family:Brush Script MT, Brush Script Std, cursive;
-    
-
-
 }
 
 
@@ -205,6 +202,4 @@ hr{
     height: 15px;
     width: 75%;
     margin-top: 2%;
-
-    
  }
